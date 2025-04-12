@@ -11,16 +11,20 @@ article {
     display: flex;
     gap: 0.5rem;
     align-items: center;
+    
   }
   
   h3 div {
     width: 0.9rem;
     height: 0.9rem;
     border-radius: 50%;
+    
   }
   
   .ticket-open {
     background-color: #de62e9;
+    
+
   }
   
   .ticket-closed {
@@ -55,6 +59,7 @@ article {
     margin: 0;
     padding: 1rem;
     font-size: 0.9rem;
+    color: white;
   }
   
   p:has(button) {

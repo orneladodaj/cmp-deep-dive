@@ -14,6 +14,8 @@ export class NewTicketComponent implements AfterViewInit{
  // @ViewChild('form') private form?: ElementRef<HTMLFormElement>;
  // @ViewChildren(ButtonComponent) buttons
   //@Output() add = new EventEmitter<{title: string; text: string;}>();
+  eneteredTitle = '';
+  enteredText = '';
   add = output<{title: string; text: string;}>();
 
 
@@ -27,8 +29,10 @@ export class NewTicketComponent implements AfterViewInit{
    console.log('AFTER VIEW INIT');
    console.log(this.form()?.nativeElement);
  }
-onSubmit(title: string, ticketTest: string){
- this.add.emit({title: title, text: ticketTest});
-  this.form()?.nativeElement.reset();
+onSubmit(){
+ this.add.emit({title: this.eneteredTitle, text: this.enteredText});
+ // this.form()?.nativeElement.reset();
+ this.eneteredTitle = '';
+ this.enteredText = '';
 }
 }
